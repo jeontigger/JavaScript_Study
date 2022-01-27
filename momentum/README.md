@@ -1,5 +1,5 @@
 # 자바 스크립트 정리
-
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference
 ## 1. 자바스크립트
 1. 선언
 ```

@@ -71,7 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # 트위터 클론 코딩
 
 ## 참조
-```
-https://create-react-app.dev/docs/importing-a-component/
-https://firebase.google.com/docs/reference/js
-```
+상대경로 지정시 "./"등을 없애주기 위한 jsconfig.json\
+https://create-react-app.dev/docs/importing-a-component/\
+fire base API 참조\
+https://firebase.google.com/docs/reference/js\

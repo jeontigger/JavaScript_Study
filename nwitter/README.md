@@ -72,6 +72,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## 참조
 상대경로 지정시 "./"등을 없애주기 위한 jsconfig.json\
-https://create-react-app.dev/docs/importing-a-component/\
+https://create-react-app.dev/docs/importing-a-component/
+\
 fire base API 참조\
-https://firebase.google.com/docs/reference/js\
+https://firebase.google.com/docs/reference/js
+\

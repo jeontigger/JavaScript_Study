@@ -72,5 +72,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## 참조
 ```
+https://create-react-app.dev/docs/importing-a-component/
 https://firebase.google.com/docs/reference/js
 ```

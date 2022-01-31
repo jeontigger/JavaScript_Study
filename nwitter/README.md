@@ -76,3 +76,8 @@ https://create-react-app.dev/docs/importing-a-component/
 \
 fire base API 참조\
 https://firebase.google.com/docs/reference/js
+
+## Authentication
+```
+이 챕터를 마치고 React와 Hook에 대해 베이스가 필요한 것 같아서 Neewting을 들어가기 전에 다른 강의를 듣기 시작
+```

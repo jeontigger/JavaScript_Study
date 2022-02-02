@@ -1,6 +1,6 @@
 # ReactJS로 영화 웹 서비스 만들기
 
-##Basic
+## Basic
 
 ```
 1. React를 깔아야함

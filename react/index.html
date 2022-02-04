@@ -5,116 +5,42 @@
   </body>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
-  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
   <script type="text/babel">
     const root = document.getElementById("root");
-    const MinutesToHours = () => {
-      const [amount, setAmount] = React.useState();
-      const [flipped, setFlipped] = React.useState(false);
-      const onChange = (event) => {
-        setAmount(event.target.value);
-      };
-      const reset = () => {
-        setAmount("");
-      };
-      const onFlip = () => {
-        setFlipped((current) => !current);
-        flipped
-          ? setAmount((current) => current * 60)
-          : setAmount((current) => current / 60);
-      };
+    function Btn({ banana, onClick }) {
+      console.log("11");
       return (
         <div>
-          <label htmlfor="minutes">Minutes</label>
-          <div>
-            <input
-              value={flipped ? amount * 60 : amount}
-              type="number"
-              id="minutes"
-              placeholder="Minutes"
-              onChange={onChange}
-              disabled={flipped === true}
-            />
-          </div>
-          <h4>You wnat to convert {amount}</h4>
-          <label htmlfor="hours">Hours</label>
-          <div>
-            <input
-              value={flipped ? amount : Math.round(amount / 60)}
-              type="number"
-              id="hours"
-              placeholder="Hours"
-              onChange={onChange}
-              disabled={flipped === false}
-            />
-          </div>
-          <button onClick={reset}>Reset</button>
-          <button onClick={onFlip}>Flip</button>
+          <button
+            onClick={onClick}
+            style={{
+              backgroundColor: "tomato",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: 10,
+              border: 0,
+              fontSize: 16,
+            }}
+          >
+            {banana}
+          </button>
         </div>
       );
+    }
+    Btn.propTypes = {
+      banana: PropTypes.string,
+      fontSize: PropTypes.number,
     };
-    const KmToMiles = () => {
-      const [amount, setAmount] = React.useState();
-      const [flipped, setFlipped] = React.useState(false);
-      const onChange = (event) => {
-        setAmount(event.target.value);
-      };
-      const reset = () => {
-        setAmount("");
-      };
-      const onFlip = () => {
-        setFlipped((current) => !current);
-        flipped
-          ? setAmount((current) => current / 0.621371)
-          : setAmount((current) => current * 0.621371);
-      };
-      return (
-        <div>
-          <label htmlfor="Km">Km</label>
-          <div>
-            <input
-              value={flipped ? amount / 0.621371 : amount}
-              type="number"
-              id="km"
-              placeholder="KM"
-              onChange={onChange}
-              disabled={flipped === true}
-            />
-          </div>
-          <h4>You wnat to convert {amount}</h4>
-          <label htmlfor="miles">Miles</label>
-          <div>
-            <input
-              value={flipped ? amount : Math.round(amount * 0.621371)}
-              type="number"
-              id="miles"
-              placeholder="Miles"
-              onChange={onChange}
-              disabled={flipped === false}
-            />
-          </div>
-          <button onClick={reset}>Reset</button>
-          <button onClick={onFlip}>Flip</button>
-        </div>
-      );
-    };
+    const MemorizedBtn = React.memo(Btn);
     const App = () => {
-      const [index, setIndex] = React.useState("xx");
-      const onSelect = (event) => {
-        setIndex(event.target.value);
-      };
+      const [value, setValue] = React.useState("Save Changes");
+      const changeValue = () => setValue("Revert Changes");
       return (
         <div>
-          <h1>Super Converter</h1>
-          <select value={index} onChange={onSelect}>
-            <option value="xx">Select your units</option>
-            <option value="0">Minutes & Hours </option>
-            <option value="1">Km & Miles </option>
-          </select>
-          <hr />
-          {index === "0" ? <MinutesToHours /> : null}
-          {index === "1" ? <KmToMiles /> : null}
+          <Btn banana={1} fontSize={"continue"} onClick={changeValue} />
+          <Btn banana="Continue" />
         </div>
       );
     };

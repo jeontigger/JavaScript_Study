@@ -23,3 +23,14 @@ input과 htmlfor의 관계를 잘 모르겠음, 아마도 인풋 타겟 정하�
 onChange 속성으로 변경될 때 마다 컨트롤
 select option의 value를 통해 컴포넌트를 divide하는 방법을 배움
 ```
+
+## Props
+
+```JSX
+attribute로 들어가는 것들이 컴포넌트의 첫 인자로 들어감
+props.banana등으로 변수를 가져올 수 있음
+오브젝트기 때문에 Btn(props.banana)대신 Btn({banana})로 가져올 수 있음
+Btn({banana, big})처럼 두개 이상도 한번에 불러올 수 있음
+prop과 eventlistener를 구분해야 함 -> prop은 다른 컴포넌트에 전달해 줄 뿐 적용시키지 않음
+React.memo()로 모든 자식 컴포넌트를 리랜딩 하지 않도록 만들 수 있음
+```

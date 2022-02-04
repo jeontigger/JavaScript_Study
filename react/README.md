@@ -33,4 +33,7 @@ props.banana등으로 변수를 가져올 수 있음
 Btn({banana, big})처럼 두개 이상도 한번에 불러올 수 있음
 prop과 eventlistener를 구분해야 함 -> prop은 다른 컴포넌트에 전달해 줄 뿐 적용시키지 않음
 React.memo()로 모든 자식 컴포넌트를 리랜딩 하지 않도록 만들 수 있음
+PropType은 어떤 타입의 prop을 받고 있는지 체크해 줌
 ```
+
+# Create-React-App으로 넘어감
